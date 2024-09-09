@@ -45,7 +45,7 @@ namespace MonthlyClaimSystem
             string claimAmount = ClaimAmountTextBox.Text;
             string supportingDocuments = SupportingDocumentsTextBox.Text;
 
-            // TODO: Add claim submission logic (e.g., save to database)
+            // TODO: Add claim submission logic
             MessageBox.Show("Claim submitted successfully!");
         }
         private void AddModule_Click(object sender, RoutedEventArgs e)
