@@ -50,7 +50,7 @@ namespace MonthlyClaimSystem
         }
         private void AddModule_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Another Module Added Successfully");
+            MessageBox.Show("Another module was added into the system");
         }
     }
 } 
