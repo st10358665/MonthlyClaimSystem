@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="MonthlyClaimSystem.ViewReviewsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel Margin="10">
+        <TextBlock Text="Module Reviews" FontWeight="Bold" FontSize="16"/>
+        <ListView x:Name="ReviewsListView">
+            <!-- Bind reviews data here -->
+        </ListView>
+    </StackPanel>
+</UserControl>

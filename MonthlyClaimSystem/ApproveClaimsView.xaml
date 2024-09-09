@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="MonthlyClaimSystem.ApproveClaimsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel Margin="10">
+        <TextBlock Text="Approve Claims" FontWeight="Bold" FontSize="16"/>
+        <ListView x:Name="ClaimsListView" SelectionChanged="ClaimsListView_SelectionChanged">
+            <!-- Define the data template for claims here -->
+        </ListView>
+        <Button Content="Approve" Click="ApproveButton_Click" Margin="0,10,0,0" IsEnabled="False" x:Name="ApproveButton"/>
+    </StackPanel>
+</UserControl>
