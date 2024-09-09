@@ -10,7 +10,7 @@
         <Label Content="Lecture Surname"/>
         <TextBox x:Name="LectureSurnameTextBox"/>
 
-        <Label Content="Employee No."/>
+        <Label Content="Employee Number"/>
         <TextBox x:Name="EmployeeNoTextBox"/>
 
         <Label Content="Contact Details"/>
