@@ -2,9 +2,26 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <StackPanel Margin="10">
-        <TextBlock Text="Module Reviews" FontWeight="Bold" FontSize="16"/>
-        <ListView x:Name="ReviewsListView">
-            <!-- Bind reviews data here -->
+        <TextBlock Text="Module Reviews" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+
+        <!-- Input Section for Searching Reviews -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBox x:Name="ModuleTextBox" Width="200" Text="Enter Module Name" Margin="0,0,10,0"/>
+            <Button Content="Search" Width="100" Click="SearchButton_Click"/>
+        </StackPanel>
+
+        <!-- ListView to Display Reviews -->
+        <ListView x:Name="ReviewsListView" Height="200">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Module" Width="150" DisplayMemberBinding="{Binding Module}"/>
+                    <GridViewColumn Header="Rating" Width="100" DisplayMemberBinding="{Binding Rating}"/>
+                    <GridViewColumn Header="Comment" Width="300" DisplayMemberBinding="{Binding Comment}"/>
+                </GridView>
+            </ListView.View>
         </ListView>
+
+        <!-- Status Message -->
+        <TextBlock x:Name="StatusMessageTextBlock" Foreground="Red" FontWeight="Bold" Margin="0,10,0,0"/>
     </StackPanel>
 </UserControl>

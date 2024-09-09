@@ -2,9 +2,27 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <StackPanel Margin="10">
-        <TextBlock Text="Track Your Claims" FontWeight="Bold" FontSize="16"/>
-        <ListView x:Name="ClaimsListView">
-            <!-- Bind claims data here -->
+        <TextBlock Text="Track Your Claims" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+
+        <!-- Input Section for Claim Tracking -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBox x:Name="ClaimIdTextBox" Width="200" Text="Enter Claim ID" Margin="0,0,10,0"/>
+            <Button Content="Track Claim" Width="100" Click="TrackClaimButton_Click"/>
+        </StackPanel>
+
+        <!-- ListView to Display Claims -->
+        <ListView x:Name="ClaimsListView" Height="200">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Claim ID" Width="100" DisplayMemberBinding="{Binding ClaimId}"/>
+                    <GridViewColumn Header="Status" Width="100" DisplayMemberBinding="{Binding Status}"/>
+                    <GridViewColumn Header="Date Filed" Width="120" DisplayMemberBinding="{Binding DateFiled}"/>
+                    <GridViewColumn Header="Amount" Width="100" DisplayMemberBinding="{Binding Amount}"/>
+                </GridView>
+            </ListView.View>
         </ListView>
+
+        <!-- Status Message -->
+        <TextBlock x:Name="StatusMessageTextBlock" Foreground="Red" FontWeight="Bold" Margin="0,10,0,0"/>
     </StackPanel>
 </UserControl>
