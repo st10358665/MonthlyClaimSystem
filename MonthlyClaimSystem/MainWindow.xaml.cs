@@ -18,8 +18,9 @@ namespace MonthlyClaimSystem
     {
         public MainWindow()
         {
+            //Checking
             InitializeComponent();
-            ContentArea.Content = new SubmitClaimView(); // Default view
+            ContentArea.Content = new SubmitClaimView(); 
         }
 
         private void SubmitClaim_Click(object sender, RoutedEventArgs e)
