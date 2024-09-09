@@ -34,7 +34,7 @@ namespace MonthlyClaimSystem
 
             if (openFileDialog.ShowDialog() == true)
             {
-                SupportingDocumentsTextBox.Text = openFileDialog.FileName; // Display selected file path
+                SupportingDocumentsTextBox.Text = openFileDialog.FileName; 
             }
            
         }
